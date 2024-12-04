@@ -11,4 +11,4 @@ Enda en
 
 Fungerer dette da?
 
-Hvor er jeg?
+Om jeg gjør sånn?
