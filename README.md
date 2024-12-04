@@ -11,3 +11,4 @@ Enda en
 
 Fungerer dette da?
 
+Hvor er jeg?
