@@ -12,3 +12,5 @@ Enda en
 Fungerer dette da?
 
 Om jeg gjør sånn?
+
+Siste nå.
