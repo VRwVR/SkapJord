@@ -26,6 +26,14 @@ resource "azurerm_storage_account" "sa_web" {
   }
 }
 
+# Static website ressurs tilhørende storage accounten
+
+resource "azurerm_storage_account_static_website" "testings" {
+  storage_account_id = azurerm_storage_account.sa_web.id
+  # error_404_document = "custom_not_found.html"
+  index_document = var.index_document
+}
+
 # Add a index.html file to the storage account
 resource "azurerm_storage_blob" "index_html" {
   name                   = var.index_document
@@ -34,12 +42,7 @@ resource "azurerm_storage_blob" "index_html" {
   type                   = "Block"
   content_type           = "text/html"
   source_content         = "${var.source_content}<h2>${local.web_suffix}</h2>"
+
+  depends_on = [azurerm_storage_account_static_website.testings]
 }
 
-# Static website ressurs tilhørende storage accounten
-
-resource "azurerm_storage_account_static_website" "testings" {
-  storage_account_id = azurerm_storage_account.sa_web.id
-  # error_404_document = "custom_not_found.html"
-  index_document = var.index_document
-}
