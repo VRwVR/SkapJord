@@ -1,4 +1,4 @@
-# Random String Generator
+# Random String Generator X
 
 resource "random_string" "random_string" {
   length  = 8
