@@ -18,7 +18,7 @@ variable "sa_name" {
 variable "source_content" {
   type        = string
   description = "Source content for the index.html file"
-  default     = "<h1>Test-webpage made with Terraform for the following workspace:</h1>"
+  default     = "<h1>Yadda! Test-webpage made with Terraform for the following workspace:</h1>"
 }
 
 variable "index_document" {
